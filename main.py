@@ -7,5 +7,8 @@ color = [ 0, 255, 0 ]
 matrix = new_matrix()
 
 
-draw_lines( matrix, screen, color )
-display(screen)
+print_matrix(matrix)
+ident(matrix)
+print_matrix(matrix)
+#draw_lines( matrix, screen, color )
+#display(screen)

@@ -12,12 +12,18 @@ import math
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
+    print(matrix)
     pass
 
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
 def ident( matrix ):
-    pass
+    for col in range(len(matrix)):
+        for val in range(len(matrix[col])):
+            if(col == val):
+                matrix[col][val] = 1
+            else:
+                matrix[col][val] = 0
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
