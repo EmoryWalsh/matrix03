@@ -19,11 +19,11 @@ def print_matrix( matrix ):
 #you may assume matrix is square
 def ident( matrix ):
     for col in range(len(matrix)):
-        for val in range(len(matrix[col])):
-            if(col == val):
-                matrix[col][val] = 1
+        for row in range(len(matrix[col])):
+            if(row == 3 or col == row):
+                matrix[col][row] = 1
             else:
-                matrix[col][val] = 0
+                matrix[col][row] = 0
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
