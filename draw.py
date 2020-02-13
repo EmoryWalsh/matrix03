@@ -6,7 +6,8 @@ def draw_lines( matrix, screen, color ):
     pass
 
 def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
-    pass
+    add_point(matrix, x0, y0, z0)
+    add_point(matrix, x1, y1, z1)
 
 def add_point( matrix, x, y, z=0 ):
     new_col = []
@@ -15,10 +16,6 @@ def add_point( matrix, x, y, z=0 ):
     new_col.append(z)
     new_col.append(1)
     matrix.append(new_col)
-    print(new_col)
-
-
-
 
 def draw_line( x0, y0, x1, y1, screen, color ):
 
