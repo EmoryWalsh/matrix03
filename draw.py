@@ -9,7 +9,13 @@ def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
     pass
 
 def add_point( matrix, x, y, z=0 ):
-    pass
+    new_col = []
+    new_col.append(x)
+    new_col.append(y)
+    new_col.append(z)
+    new_col.append(1)
+    matrix.append(new_col)
+    print(new_col)
 
 
 

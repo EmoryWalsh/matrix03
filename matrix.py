@@ -13,7 +13,6 @@ import math
 #the template in the top comment
 def print_matrix( matrix ):
     print(matrix)
-    pass
 
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
