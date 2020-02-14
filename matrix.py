@@ -12,17 +12,17 @@ import math
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
-    for i in range(4):
-        row = ""
+    for row in range(4):
+        rowMake = ""
         for col in range(len(matrix)):
-            row += str(matrix[col][i])
-            if(matrix[col][i] < 10):
-                row += "   "
-            elif(matrix[col][i] < 100):
-                row += "  "
+            rowMake += str(matrix[col][row])
+            if(matrix[col][row] < 10):
+                rowMake += "   "
+            elif(matrix[col][row] < 100):
+                rowMake += "  "
             else:
-                row += " " 
-        print(row)
+                rowMake += " "
+        print(rowMake)
 
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
@@ -37,7 +37,12 @@ def ident( matrix ):
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-    pass
+    #pass
+    for i in range(4): #rows in m1
+        for col in m1: #cols in m2
+            print(col[i])
+            
+
 
 
 
