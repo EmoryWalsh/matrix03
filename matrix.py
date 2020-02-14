@@ -15,7 +15,13 @@ def print_matrix( matrix ):
     for i in range(4):
         row = ""
         for col in range(len(matrix)):
-            row += str(matrix[col][i]) + " "
+            row += str(matrix[col][i])
+            if(matrix[col][i] < 10):
+                row += "   "
+            elif(matrix[col][i] < 100):
+                row += "  "
+            else:
+                row += " " 
         print(row)
 
 #turn the paramter matrix into an identity matrix
