@@ -14,11 +14,14 @@ for col in range(len(matrix)):
         else:
             matrix[col][row] = random.randrange(500)
 
-matrix1 = [[100, 4, 0, 1],[32, 495, 0, 1],[433, 54, 0, 1],[133, 14, 0, 1],[9, 214, 0, 1],[13, 20, 0, 1],[353, 484, 0, 1],[123, 64, 0, 1],[1, 304, 0, 1]]
+matrix1 = [[1,2,3,4],[5,6,7,8],[9,1,2,3],[4,5,6,7]]
 
+ident(matrix)
+matrix[0][0] = 3
 
 print_matrix(matrix)
 print("\n")
 print_matrix(matrix1)
 print("\n")
 matrix_mult(matrix, matrix1)
+print_matrix(matrix1)

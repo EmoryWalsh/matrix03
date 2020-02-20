@@ -22,7 +22,7 @@ def print_matrix( matrix ):
                 rowMake += "  "
             else:
                 rowMake += " "
-        print(rowMake)
+        print rowMake
 
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
@@ -37,11 +37,14 @@ def ident( matrix ):
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-    #pass
-    for i in range(4): #rows in m1
-        for col in m1: #cols in m2
-            print(col[i])
-            
+    result = new_matrix()
+    for i in range(len(m1)):
+   # iterate through columns of Y
+        for j in range(len(m2[0])):
+       # iterate through rows of Y
+            for k in range(len(m2)):
+                result[i][j] += m1[i][k] * m2[k][j]
+    print_matrix(result)
 
 
 
