@@ -37,11 +37,11 @@ def ident( matrix ):
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-    for a in range(len(m2)):
+    for a in range(len(m2)): #cols in m2
         result = []
-        for b in range(len(m2[0])):
+        for b in range(len(m2[0])): #rows in m2
             res = 0
-            for c in range(len(m1)):
+            for c in range(len(m1)): #cols in m1
                 res += m1[c][b] * m2[a][c]
             result.append(res)
         m2[a] = result
