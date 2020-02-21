@@ -12,7 +12,7 @@ import math
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
-    for row in range(4):
+    for row in range(len(matrix[0])):
         rowMake = ""
         for col in range(len(matrix)):
             rowMake += str(matrix[col][row])
@@ -37,16 +37,14 @@ def ident( matrix ):
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-    result = new_matrix()
-    for i in range(len(m1)):
-   # iterate through columns of Y
-        for j in range(len(m2[0])):
-       # iterate through rows of Y
-            for k in range(len(m2)):
-                result[i][j] += m1[i][k] * m2[k][j]
-    print_matrix(result)
-
-
+    for a in range(len(m2)):
+        result = []
+        for b in range(len(m2[0])):
+            res = 0
+            for c in range(len(m1)):
+                res += m1[c][b] * m2[a][c]
+            result.append(res)
+        m2[a] = result
 
 
 
